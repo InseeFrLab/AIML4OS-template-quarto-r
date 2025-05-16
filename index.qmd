@@ -1,0 +1,164 @@
+---
+title: "Hello SSPCloud" # See below for multilingual resource
+author: "Daffy Duck"
+date: "2025-05-16"
+doi: "10.1000/182"  # Optional
+license: "CC-BY 4.0"  # Optional
+
+# If resources is multilingual, adopt that structure
+# (need to have both title and title-* fields)
+# title: "Hello SSPCloud"
+# title-en: "Hello SSPCloud"
+# title-fr: "Bonjour SSPCloud"
+
+description: |
+    Resource summaries are embedded as metadata for use in training portals and for sharing on social media.
+
+# If resources is multilingual, adopt that structure
+# (need to have both description and description-* fields)
+
+# description: |
+  # Resource summaries are embedded as metadata for use in training portals and for sharing on social media.
+# description-multilingual:
+  # en: |
+  #   Resource summaries are embedded as metadata for use in training portals and for sharing on social media.
+  # fr: |
+  #   Les résumés des ressources sont intégrés sous forme de métadonnées, utiles pour les portails de formation ou le partage sur les réseaux sociaux.
+
+tags:
+  - Starter Pack
+  - SSPCloud Documentation
+
+image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQY-OenRMvFyZUfDm_snUCxpV4SyaHvUeqObA&s"
+
+# You can also add any valid Quarto option:
+# HTML: https://quarto.org/docs/reference/formats/html.html
+# PDF: https://quarto.org/docs/reference/formats/pdf.html
+# ...
+
+# Custom metadata for training portals -------------------------------------
+
+duration: "90"  # Duration in minutes
+
+skills:
+  - Git Basics
+  - Quarto Authoring
+  - Reproducible Research
+  - Using SSPCloud
+
+courseMaterial:
+  - R Scripts
+  # - Videos
+  # - Jupyter Notebooks
+
+publicLevel:
+  - Beginner
+  - Intermediate
+  # - Expert
+
+resourceLanguage:
+  - R
+  # - Python
+
+suggestedBefore:
+  - https://quarto.org/
+  - https://juba.github.io/tidyverse/
+
+deploymentURL:
+  - rstudio:
+      - "https://datalab.sspcloud.fr/launcher/ide/rstudio-sparkr?autoLaunch=true&init.personalInit=%C2%ABhttps%3A%2F%2Fraw.githubusercontent.com%2FInseeFrLab%2Fformation-bceao%2Fmain%2Ftp%2Finit-tp.sh%C2%BB&resources.limits.memory=%C2%AB100Gi%C2%BB&persistence.size=%C2%AB40Gi%C2%BB&init.personalInitArgs=%C2%ABen%C2%BB"
+  - jupyter:
+      - "https://datalab.sspcloud.fr/launcher/ide/jupyter-python?name=jupyter-python&shared=false&version=1.13.44&autoLaunch=true&init.personalInit=%C2%ABhttps%3A%2F%2Fraw.githubusercontent.com%2Flinogaliana%2Fpython-datascientist%2Fmaster%2Fsspcloud%2Finit-jupyter.sh%C2%BB&init.personalInitArgs=%C2%ABen%2Fmanipulation%2001_numpy%C2%BB"  
+  - vscode:
+      - en: "https://datalab.sspcloud.fr/launcher/ide/vscode-python?autoLaunch=true&onyxia.friendlyName=%C2%AB03_geopandas_intro%C2%BB&init.personalInit=%C2%ABhttps%3A%2F%2Fraw.githubusercontent.com%2Flinogaliana%2Fpython-datascientist%2Fmaster%2Fsspcloud%2Finit-vscode.sh%C2%BB&init.personalInitArgs=%C2%ABen/manipulation%2003_geopandas_intro%C2%BB&security.allowlist.enabled=false"
+      - fr: "https://datalab.sspcloud.fr/launcher/ide/vscode-python?autoLaunch=true&onyxia.friendlyName=%C2%AB03_geopandas_intro%C2%BB&init.personalInit=%C2%ABhttps%3A%2F%2Fraw.githubusercontent.com%2Flinogaliana%2Fpython-datascientist%2Fmaster%2Fsspcloud%2Finit-vscode.sh%C2%BB&init.personalInitArgs=%C2%ABen/manipulation%2003_geopandas_intro%C2%BB&security.allowlist.enabled=false"
+
+# Optional: Statistical process classification
+gsbpm: "5.1" # See complete taxonomy: https://www.unescap.org/sites/default/d8files/event-documents/GSBPM_v5.1_R_for_SBP_8-18Apr2024.pdf
+---
+
+Rstudio projects and  `renv` are two useful tools to offer a convenient interface to write `R` code and disseminate it to users in a reproducible ways. 
+
+## Rstudio projects
+
+Rstudio Projects are a built-in feature of RStudio that help organize your work in a consistent and structured way. When you create an RStudio project, it establishes a self-contained working environment tied to a specific folder on your computer, containing all the files related to the project. An RStudio project is essentially a wrapper around a folder, with a file ending in `.Rproj` that stores project-specific settings.
+
+
+RStudio Projects have multiple advantages: 
+
+- __Easy script management and lisibility__: all scripts related to a task are kept in one designated folder, and are not mixed with scripts pertaining to unrelated tasks. The clear structure of RStudio projects ensures that collaborators can quickly understand and use your project.
+
+- __Consistent working directory and portability__: RStudio automatically sets the working directory to the project's folder when you open the Rstudio project. There is no need to use `setwd()`, and all paths are relative to the project's folder. This increases the portability of code.
+
+- __Integration with git__: Rstudio projects work seamlessly with Git thanks to a dedicated panel in the Rstudio interface. This makes tracking changes, working with collaborators (and reverting to earlier versions if needed) really easy.
+
+- __Integration with Quarto__: RStudio projects provide a natural environment for rendering reports, books, and presentations, maintaining a clear link between source files and outputs.
+
+- __Reproducibility through the `renv` integration__: `renv` is an R package that helps creating reproducible environments by systematically listing the dependencies of a project. `renv` works seamlessly with RStudio projects, making it easy to manage dependencies and ensure reproducibility.
+
+## `renv`
+
+### What is `renv`
+
+`renv` is an R package that helps manage project-specific package libraries in `R`. It lists the dependencies of a project, so that the execution environment can be easily restored in other settings, or by other users. Using `renv` greatly improves the reproducibility of `R` code.
+
+Moreover, `renv` works seamlessly with RStudio projects: 
+
+- **Easy Initialization**: `renv` detects when it's used within an RStudio project and sets the working directory to the project folder.
+- **Environment Isolation**: each RStudio project can have its own `renv` library, preventing dependency conflicts across projects.
+- **Easy configuration**: the `.Rproj` file can store settings related to `renv`, such as enabling auto-activation (activating `renv` automatically when the project is opened).
+- **Reproducibility**: cloning a RStudio project repository and then running `renv::restore()` recreates the exact environment needed to run the project.
+
+### How to use `renv`
+
+ 1. **Initialization**
+ - Run `renv::init()` to initialize `renv` in a Rstudio project. This creates:
+  - A private package library (`/renv/library`) in the project directory. R prioritizes this library over the global R library when working within the project.
+  - Configuration files like `renv.lock` and `renv/settings.json`. The `renv.lock` file records the exact version of each package and its source. It ensures that the same environment can be recreated in the future or on another system.
+
+2. **Dependency Management**
+- The `renv::snapshot()` command updates the `renv.lock` to reflect the current state of the project's library.
+- The `renv::restore()` reinstalls the exact package versions listed in the `renv.lock` file.
+
+3. **Integration with Version Control**
+- The lockfile can be committed to Git, allowing collaborators to replicate the same environment by running `renv::restore()`.
+
+### `renv` workflow
+
+First, if not automatically initiated, you need to start following dependencies using `renv`:
+
+```{.r}
+# Initialize renv
+renv::init()
+```
+
+Then, let's say your quarto document will make use of `dplyr` and `ggplot2`. In R command you write
+
+```{.r}
+install.packages(c("ggplot2", "dplyr"))
+```
+
+
+Then you can develop your document, let's say it contains this chunk
+
+```{.r}
+library(dplyr)
+library(ggplot2)
+
+iris <- as_tibble(iris)
+
+ggplot(iris) + 
+geom_point(aes(x = Sepal.Length, y = Petal.Width, color = Species))
+
+```
+
+
+Once you are happy with your document, you snapshot the reproducible environment you use:
+
+```{.r}
+# Update the lockile
+renv::snapshot()
+```
+
+
+
