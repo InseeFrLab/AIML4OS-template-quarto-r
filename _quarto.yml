@@ -14,7 +14,7 @@ website:
   site-url: "https://github.com/InseeFrLab/AIML4OS-template-quarto-r"
   repo-url: "https://github.com/InseeFrLab/AIML4OS-template-quarto-r"
   repo-actions: [edit, source, issue]
-  favicon: images/Template2.png
+  # favicon: images/Template2.png
   sidebar:
     style: "docked"
     search: true
