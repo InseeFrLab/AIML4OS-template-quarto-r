@@ -74,7 +74,7 @@ deploymentURL:
   - rstudio:
       - "https://datalab.sspcloud.fr/launcher/ide/rstudio-sparkr?autoLaunch=true&init.personalInit=%C2%ABhttps%3A%2F%2Fraw.githubusercontent.com%2FInseeFrLab%2Fformation-bceao%2Fmain%2Ftp%2Finit-tp.sh%C2%BB&resources.limits.memory=%C2%AB100Gi%C2%BB&persistence.size=%C2%AB40Gi%C2%BB&init.personalInitArgs=%C2%ABen%C2%BB"
   - jupyter:
-      - "https://datalab.sspcloud.fr/launcher/ide/jupyter-python?name=jupyter-python&shared=false&version=1.13.44&autoLaunch=true&init.personalInit=%C2%ABhttps%3A%2F%2Fraw.githubusercontent.com%2Flinogaliana%2Fpython-datascientist%2Fmaster%2Fsspcloud%2Finit-jupyter.sh%C2%BB&init.personalInitArgs=%C2%ABen%2Fmanipulation%2001_numpy%C2%BB"  
+      - "https://datalab.sspcloud.fr/launcher/ide/jupyter-python?name=jupyter-python&shared=false&version=1.13.44&autoLaunch=true&init.personalInit=%C2%ABhttps%3A%2F%2Fraw.githubusercontent.com%2Flinogaliana%2Fpython-datascientist%2Fmaster%2Fsspcloud%2Finit-jupyter.sh%C2%BB&init.personalInitArgs=%C2%ABen%2Fmanipulation%2001_numpy%C2%BB"
   - vscode:
       - en: "https://datalab.sspcloud.fr/launcher/ide/vscode-python?autoLaunch=true&onyxia.friendlyName=%C2%AB03_geopandas_intro%C2%BB&init.personalInit=%C2%ABhttps%3A%2F%2Fraw.githubusercontent.com%2Flinogaliana%2Fpython-datascientist%2Fmaster%2Fsspcloud%2Finit-vscode.sh%C2%BB&init.personalInitArgs=%C2%ABen/manipulation%2003_geopandas_intro%C2%BB&security.allowlist.enabled=false"
       - fr: "https://datalab.sspcloud.fr/launcher/ide/vscode-python?autoLaunch=true&onyxia.friendlyName=%C2%AB03_geopandas_intro%C2%BB&init.personalInit=%C2%ABhttps%3A%2F%2Fraw.githubusercontent.com%2Flinogaliana%2Fpython-datascientist%2Fmaster%2Fsspcloud%2Finit-vscode.sh%C2%BB&init.personalInitArgs=%C2%ABen/manipulation%2003_geopandas_intro%C2%BB&security.allowlist.enabled=false"
@@ -83,14 +83,15 @@ deploymentURL:
 gsbpm: "5.1" # See complete taxonomy: https://www.unescap.org/sites/default/d8files/event-documents/GSBPM_v5.1_R_for_SBP_8-18Apr2024.pdf
 ---
 
-Rstudio projects and  `renv` are two useful tools to offer a convenient interface to write `R` code and disseminate it to users in a reproducible ways. 
+
+Rstudio projects and  `renv` are two useful tools to offer a convenient interface to write `R` code and disseminate it to users in a reproducible ways.
 
 ## Rstudio projects
 
 Rstudio Projects are a built-in feature of RStudio that help organize your work in a consistent and structured way. When you create an RStudio project, it establishes a self-contained working environment tied to a specific folder on your computer, containing all the files related to the project. An RStudio project is essentially a wrapper around a folder, with a file ending in `.Rproj` that stores project-specific settings.
 
 
-RStudio Projects have multiple advantages: 
+RStudio Projects have multiple advantages:
 
 - __Easy script management and lisibility__: all scripts related to a task are kept in one designated folder, and are not mixed with scripts pertaining to unrelated tasks. The clear structure of RStudio projects ensures that collaborators can quickly understand and use your project.
 
@@ -108,7 +109,7 @@ RStudio Projects have multiple advantages:
 
 `renv` is an R package that helps manage project-specific package libraries in `R`. It lists the dependencies of a project, so that the execution environment can be easily restored in other settings, or by other users. Using `renv` greatly improves the reproducibility of `R` code.
 
-Moreover, `renv` works seamlessly with RStudio projects: 
+Moreover, `renv` works seamlessly with RStudio projects:
 
 - **Easy Initialization**: `renv` detects when it's used within an RStudio project and sets the working directory to the project folder.
 - **Environment Isolation**: each RStudio project can have its own `renv` library, preventing dependency conflicts across projects.
@@ -153,7 +154,7 @@ library(ggplot2)
 
 iris <- as_tibble(iris)
 
-ggplot(iris) + 
+ggplot(iris) +
 geom_point(aes(x = Sepal.Length, y = Petal.Width, color = Species))
 
 ```
