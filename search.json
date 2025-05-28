@@ -1,0 +1,42 @@
+[
+  {
+    "objectID": "chapter1.html",
+    "href": "chapter1.html",
+    "title": "How to use ggplot2",
+    "section": "",
+    "text": "How to use ggplot2\nHere is a code snippet to produce a beautiful plot done with ggplot2.\n\nlibrary(dplyr)\nlibrary(ggplot2)\n\niris &lt;- iris\n\nggplot(iris) + \n  geom_point(aes(x = Sepal.Length, y = Petal.Length, color = Species))\n\nAnd here is the amazing result.\n\n\n\n\n\n\n\n\n\n\n\nConclusion\nNow you know everything on ggplot2.",
+    "crumbs": [
+      "Plot with `ggplot2`"
+    ]
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Hello SSPCloud",
+    "section": "",
+    "text": "Rstudio projects and renv are two useful tools to offer a convenient interface to write R code and disseminate it to users in a reproducible ways.",
+    "crumbs": [
+      "Introduction"
+    ]
+  },
+  {
+    "objectID": "index.html#rstudio-projects",
+    "href": "index.html#rstudio-projects",
+    "title": "Hello SSPCloud",
+    "section": "Rstudio projects",
+    "text": "Rstudio projects\nRstudio Projects are a built-in feature of RStudio that help organize your work in a consistent and structured way. When you create an RStudio project, it establishes a self-contained working environment tied to a specific folder on your computer, containing all the files related to the project. An RStudio project is essentially a wrapper around a folder, with a file ending in .Rproj that stores project-specific settings.\nRStudio Projects have multiple advantages:\n\nEasy script management and lisibility: all scripts related to a task are kept in one designated folder, and are not mixed with scripts pertaining to unrelated tasks. The clear structure of RStudio projects ensures that collaborators can quickly understand and use your project.\nConsistent working directory and portability: RStudio automatically sets the working directory to the project’s folder when you open the Rstudio project. There is no need to use setwd(), and all paths are relative to the project’s folder. This increases the portability of code.\nIntegration with git: Rstudio projects work seamlessly with Git thanks to a dedicated panel in the Rstudio interface. This makes tracking changes, working with collaborators (and reverting to earlier versions if needed) really easy.\nIntegration with Quarto: RStudio projects provide a natural environment for rendering reports, books, and presentations, maintaining a clear link between source files and outputs.\nReproducibility through the renv integration: renv is an R package that helps creating reproducible environments by systematically listing the dependencies of a project. renv works seamlessly with RStudio projects, making it easy to manage dependencies and ensure reproducibility.",
+    "crumbs": [
+      "Introduction"
+    ]
+  },
+  {
+    "objectID": "index.html#renv",
+    "href": "index.html#renv",
+    "title": "Hello SSPCloud",
+    "section": "renv",
+    "text": "renv\n\nWhat is renv\nrenv is an R package that helps manage project-specific package libraries in R. It lists the dependencies of a project, so that the execution environment can be easily restored in other settings, or by other users. Using renv greatly improves the reproducibility of R code.\nMoreover, renv works seamlessly with RStudio projects:\n\nEasy Initialization: renv detects when it’s used within an RStudio project and sets the working directory to the project folder.\nEnvironment Isolation: each RStudio project can have its own renv library, preventing dependency conflicts across projects.\nEasy configuration: the .Rproj file can store settings related to renv, such as enabling auto-activation (activating renv automatically when the project is opened).\nReproducibility: cloning a RStudio project repository and then running renv::restore() recreates the exact environment needed to run the project.\n\n\n\nHow to use renv\n\nInitialization\n\n\nRun renv::init() to initialize renv in a Rstudio project. This creates:\nA private package library (/renv/library) in the project directory. R prioritizes this library over the global R library when working within the project.\nConfiguration files like renv.lock and renv/settings.json. The renv.lock file records the exact version of each package and its source. It ensures that the same environment can be recreated in the future or on another system.\n\n\nDependency Management\n\n\nThe renv::snapshot() command updates the renv.lock to reflect the current state of the project’s library.\nThe renv::restore() reinstalls the exact package versions listed in the renv.lock file.\n\n\nIntegration with Version Control\n\n\nThe lockfile can be committed to Git, allowing collaborators to replicate the same environment by running renv::restore().\n\n\n\nrenv workflow\nFirst, if not automatically initiated, you need to start following dependencies using renv:\n# Initialize renv\nrenv::init()\nThen, let’s say your quarto document will make use of dplyr and ggplot2. In R command you write\ninstall.packages(c(\"ggplot2\", \"dplyr\"))\nThen you can develop your document, let’s say it contains this chunk\nlibrary(dplyr)\nlibrary(ggplot2)\n\niris &lt;- as_tibble(iris)\n\nggplot(iris) +\ngeom_point(aes(x = Sepal.Length, y = Petal.Width, color = Species))\nOnce you are happy with your document, you snapshot the reproducible environment you use:\n# Update the lockile\nrenv::snapshot()",
+    "crumbs": [
+      "Introduction"
+    ]
+  }
+]
