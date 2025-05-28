@@ -1,13 +1,27 @@
 project:
   type: website
+  preview:
+    port: 5000
+    browser: false
+  render:
+    - index.qmd
+    - chapter1.qmd
 
 website:
-  title: "template-r"
-  navbar:
-    left:
+  page-navigation: true
+  title: "Introduction to `ggplot2`"
+  site-url: "https://github.com/InseeFrLab/AIML4OS-template-quarto-r"
+  repo-url: "https://github.com/InseeFrLab/AIML4OS-template-quarto-r"
+  repo-actions: [edit, source, issue]
+  # favicon: images/Template2.png
+  sidebar:
+    style: "docked"
+    search: true
+    contents:
       - href: index.qmd
-        text: Home
-      - about.qmd
+        text: Introduction
+      - href: chapter1.qmd
+        text: Plot with `ggplot2`
 
 format:
   html:
