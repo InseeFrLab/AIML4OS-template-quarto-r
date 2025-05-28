@@ -8,6 +8,14 @@ project:
     - index.qmd
     - chapter1.qmd
 
+author:
+  - name: Public Statistician 1
+    url: https://github.com/publicstatistician1
+    email: Public.Statistician1@statistics.org
+  - name: Public Statistician 2
+    url: https://github.com/publicstatistician2
+    email: Public.Statistician2@statistics.org
+
 website:
   page-navigation: true
   title: "Introduction to `ggplot2`"
