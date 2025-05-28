@@ -26,8 +26,8 @@ jobs:
       # Step 4: Install R dependencies
       - name: Install R packages
         run: |
-         Rscript -e 'install.packages(c("rmarkdown"), repos = "https://cloud.r-project.org")'
-
+         Rscript -e 'install.packages(c("rmarkdown", "dplyr", "ggplot2"), repos = "https://cloud.r-project.org")'
+       
       # Step 5: Compile document
       - name: Publish to GitHub Pages (and render)
         uses: quarto-dev/quarto-actions/publish@v2
