@@ -1,0 +1,39 @@
+
+
+# How to use `ggplot2`
+
+Here is a code snippet to produce a beautiful plot done with `ggplot2`.
+
+```{r}
+#| warning: false
+#| eval: false
+library(dplyr)
+library(ggplot2)
+
+iris <- iris
+
+ggplot(iris) + 
+  geom_point(aes(x = Sepal.Length, y = Petal.Length, color = Species))
+
+```
+
+And here is the amazing result.
+
+```{r}
+#| warning: false
+#| echo: false
+library(dplyr)
+library(ggplot2)
+
+iris <- iris
+
+ggplot(iris) + 
+  geom_point(aes(x = Sepal.Length, y = Petal.Length, color = Species))
+
+```
+
+# Conclusion
+
+Now you know everything on `ggplot2`.
+
+
