@@ -4,7 +4,7 @@
     "href": "chapter1.html",
     "title": "How to use ggplot2",
     "section": "",
-    "text": "How to use ggplot2\nHere is a code snippet to produce a beautiful plot done with ggplot2.\n\nlibrary(dplyr)\nlibrary(ggplot2)\n\niris &lt;- iris\n\nggplot(iris) + \n  geom_point(aes(x = Sepal.Length, y = Petal.Length, color = Species))\n\nAnd here is the amazing result.\n\n\n\n\n\n\n\n\n\n\n\nConclusion\nNow you know everything on ggplot2.",
+    "text": "How to use ggplot2\nHere is a code snippet to produce a beautiful plot done with ggplot2.\n#| warning: false\n#| eval: false\nlibrary(dplyr)\nlibrary(ggplot2)\n\niris &lt;- iris\n\nggplot(iris) +\n  geom_point(aes(x = Sepal.Length, y = Petal.Length, color = Species))\nAnd here is the amazing result.\n#| warning: false\n#| echo: false\nlibrary(dplyr)\nlibrary(ggplot2)\n\niris &lt;- iris\n\nggplot(iris) +\n  geom_point(aes(x = Sepal.Length, y = Petal.Length, color = Species))\n\n\nConclusion\nNow you know everything on ggplot2.",
     "crumbs": [
       "Plot with `ggplot2`"
     ]
