@@ -4,7 +4,8 @@
         "fr": "Resource summaries are embedded as metadata for use in training portals and for sharing on social media."
     },
     "authors": [
-        "Daffy Duck"
+        "Public Statistician 1",
+        "Public Statistician 2"
     ],
     "category": "training courses with R and Python",
     "deploymentUrl": {
@@ -20,6 +21,7 @@
         }
     },
     "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQY-OenRMvFyZUfDm_snUCxpV4SyaHvUeqObA&s",
+    "lastModification": "2025-05-28",
     "license": "CC-BY 4.0",
     "name": {
         "en": "Hello SSPCloud",
@@ -30,6 +32,10 @@
         "Quarto Authoring",
         "Reproducible Research",
         "Using SSPCloud"
+    ],
+    "suggestedRequirements": [
+        "https://quarto.org/",
+        "https://scikit-learn.org/stable/"
     ],
     "tags": [
         "Starter Pack",

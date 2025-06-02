@@ -79,9 +79,14 @@ deploymentURL:
       - en: "https://datalab.sspcloud.fr/launcher/ide/vscode-python?autoLaunch=true&onyxia.friendlyName=%C2%AB03_geopandas_intro%C2%BB&init.personalInit=%C2%ABhttps%3A%2F%2Fraw.githubusercontent.com%2Flinogaliana%2Fpython-datascientist%2Fmaster%2Fsspcloud%2Finit-vscode.sh%C2%BB&init.personalInitArgs=%C2%ABen/manipulation%2003_geopandas_intro%C2%BB&security.allowlist.enabled=false"
       - fr: "https://datalab.sspcloud.fr/launcher/ide/vscode-python?autoLaunch=true&onyxia.friendlyName=%C2%AB03_geopandas_intro%C2%BB&init.personalInit=%C2%ABhttps%3A%2F%2Fraw.githubusercontent.com%2Flinogaliana%2Fpython-datascientist%2Fmaster%2Fsspcloud%2Finit-vscode.sh%C2%BB&init.personalInitArgs=%C2%ABen/manipulation%2003_geopandas_intro%C2%BB&security.allowlist.enabled=false"
 
+suggestedRequirements:
+  - "https://quarto.org/"
+  - "https://scikit-learn.org/stable/"
+
 # Optional: Statistical process classification
 gsbpm: "5.1" # See complete taxonomy: https://www.unescap.org/sites/default/d8files/event-documents/GSBPM_v5.1_R_for_SBP_8-18Apr2024.pdf
 ---
+
 
 
 Rstudio projects and  `renv` are two useful tools to offer a convenient interface to write `R` code and disseminate it to users in a reproducible ways.
