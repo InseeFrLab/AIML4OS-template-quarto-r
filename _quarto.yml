@@ -5,7 +5,7 @@ project:
     browser: false
   render:
     - index.qmd
-    - chapter1.qmd
+    - chapters/chapter1.qmd
 
 website:
   page-navigation: true
@@ -15,12 +15,13 @@ website:
   repo-actions: [edit, source, issue]
   # favicon: images/Template2.png
   sidebar:
+    logo: resources/profile/main3.png
     style: "docked"
     search: true
     contents:
       - href: index.qmd
         text: Introduction
-      - href: chapter1.qmd
+      - href: chapters/chapter1.qmd
         text: Plot with `ggplot2`
 
 format:

@@ -1,10 +1,19 @@
 
 
-# How to use `ggplot2`
+# Introduction to `ggplot2`
+
+## What is `ggplot2`?
+
+`ggplot2` is an amazing package for data visualisation.
+
+## How to use `ggplot2`
+
+
+
 
 Here is a code snippet to produce a beautiful plot done with `ggplot2`.
 
-```r
+```{r}
 #| warning: false
 #| eval: false
 library(dplyr)
@@ -19,7 +28,7 @@ ggplot(iris) +
 
 And here is the amazing result.
 
-```r
+```{r}
 #| warning: false
 #| echo: false
 library(dplyr)
