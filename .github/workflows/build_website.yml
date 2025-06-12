@@ -30,11 +30,7 @@ jobs:
         run: |
          Rscript -e 'install.packages(c("rmarkdown", "dplyr", "ggplot2"), repos = "https://cloud.r-project.org")'
        
-      # Step 5: Render website
-      - name: Render website
-        run: quarto render --to html       
-       
-      # Step 6: Publish website
+      # Step 5: Publish website
       - name: Publish to GitHub Pages (and render)
         uses: quarto-dev/quarto-actions/publish@v2
         with:
