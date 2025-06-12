@@ -6,7 +6,7 @@
     "section": "",
     "text": "ggplot2 is an amazing package for data visualisation.\n\n\n\nHere is a code snippet to produce a beautiful plot done with ggplot2.\n\nlibrary(dplyr)\nlibrary(ggplot2)\n\niris &lt;- iris\n\nggplot(iris) +\n  geom_point(aes(x = Sepal.Length, y = Petal.Length, color = Species))\n\nAnd here is the amazing result.",
     "crumbs": [
-      "Plot with `ggplot2`"
+      "Plot with ggplot2"
     ]
   },
   {
@@ -16,7 +16,7 @@
     "section": "",
     "text": "ggplot2 is an amazing package for data visualisation.",
     "crumbs": [
-      "Plot with `ggplot2`"
+      "Plot with ggplot2"
     ]
   },
   {
@@ -26,7 +26,7 @@
     "section": "",
     "text": "Here is a code snippet to produce a beautiful plot done with ggplot2.\n\nlibrary(dplyr)\nlibrary(ggplot2)\n\niris &lt;- iris\n\nggplot(iris) +\n  geom_point(aes(x = Sepal.Length, y = Petal.Length, color = Species))\n\nAnd here is the amazing result.",
     "crumbs": [
-      "Plot with `ggplot2`"
+      "Plot with ggplot2"
     ]
   },
   {
@@ -34,7 +34,7 @@
     "href": "index.html",
     "title": "Template for WP6 training material",
     "section": "",
-    "text": "What is this template?\nThis template is a Quarto Website customized for the AIML4OS project, designed to be used with\n\n\nReuseCC-BY 4.0",
+    "text": "What is this template?\nThis template is a Quarto Website customized for the AIML4OS project, designed to be used with .\n\n\nHow to use it?\nSee this tutorial.\n\n\n\n\nReuseCC-BY 4.0",
     "crumbs": [
       "Introduction"
     ]
