@@ -92,13 +92,11 @@ gsbpm: "5.1" # See complete taxonomy: https://www.unescap.org/sites/default/d8fi
 
 # What is this template?
 
-This template is a Quarto Website customized for the AIML4OS project.
+This template is a Quarto Website customized for the AIML4OS project, designed to be used with `R`.
 
 # How to use it?
 
-- Fork and rename with a meaningful name;
-- Cut the fork relationship;
-- Set the CI/CD with Github Pages.
+See [this tutorial](https://inseefrlab.github.io/formation-starting-pack/).
 
 
 
