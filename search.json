@@ -1,0 +1,42 @@
+[
+  {
+    "objectID": "chapters/chapter1.html",
+    "href": "chapters/chapter1.html",
+    "title": "Introduction to ggplot2",
+    "section": "",
+    "text": "ggplot2 is an amazing package for data visualisation.\n\n\n\nHere is a code snippet to produce a beautiful plot done with ggplot2.\n\nlibrary(dplyr)\nlibrary(ggplot2)\n\niris &lt;- iris\n\nggplot(iris) +\n  geom_point(aes(x = Sepal.Length, y = Petal.Length, color = Species))\n\nAnd here is the amazing result.",
+    "crumbs": [
+      "Plot with `ggplot2`"
+    ]
+  },
+  {
+    "objectID": "chapters/chapter1.html#what-is-ggplot2",
+    "href": "chapters/chapter1.html#what-is-ggplot2",
+    "title": "Introduction to ggplot2",
+    "section": "",
+    "text": "ggplot2 is an amazing package for data visualisation.",
+    "crumbs": [
+      "Plot with `ggplot2`"
+    ]
+  },
+  {
+    "objectID": "chapters/chapter1.html#how-to-use-ggplot2",
+    "href": "chapters/chapter1.html#how-to-use-ggplot2",
+    "title": "Introduction to ggplot2",
+    "section": "",
+    "text": "Here is a code snippet to produce a beautiful plot done with ggplot2.\n\nlibrary(dplyr)\nlibrary(ggplot2)\n\niris &lt;- iris\n\nggplot(iris) +\n  geom_point(aes(x = Sepal.Length, y = Petal.Length, color = Species))\n\nAnd here is the amazing result.",
+    "crumbs": [
+      "Plot with `ggplot2`"
+    ]
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Template for WP6 training material",
+    "section": "",
+    "text": "What is this template?\nThis template is a Quarto Website customized for the AIML4OS project, designed to be used with R.\n\n\nHow to use it?\nSee this tutorial.\n\n\n\n\nReuseCC-BY 4.0",
+    "crumbs": [
+      "Introduction"
+    ]
+  }
+]
