@@ -1,8 +1,5 @@
 project:
   type: website
-  preview:
-    port: 5000
-    browser: false
   render:
     - index.qmd
     - chapters/chapter1.qmd
@@ -22,7 +19,7 @@ website:
       - href: index.qmd
         text: Introduction
       - href: chapters/chapter1.qmd
-        text: Plot with `ggplot2`
+        text: Plot with ggplot2
 
 format:
   html:
