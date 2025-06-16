@@ -1,0 +1,1 @@
+mc cp s3/donnees-insee/diffusion/ETAT_CIVIL/2020/DECES_COM_1019.csv ./
