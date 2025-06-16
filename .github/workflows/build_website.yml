@@ -1,17 +1,21 @@
 name: Build the website
 
+# The workflow is executed every time there is a push to the main branch
 on:
   push:
     branches:
-      - main   # Triggers workflow on push to the main branch
+      - main
   workflow_dispatch:
 
+# These are the jobs to be completed (there is only one job actually)
 jobs:
+  # Job 1
   publish:
     runs-on: ubuntu-latest
     permissions:
       contents: write
-
+    
+    # Here are the different steps of Job 1
     steps:
       # Step 1: Checkout the repository
       - name: Checkout repository
